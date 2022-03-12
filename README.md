@@ -9,7 +9,7 @@ upload files using dmenu
 2. recieve a notification once uploaded.
 3. automatically copy the link to clipboard.
 4. check the links of files uploaded recently.
-5. bind to keyboard shorcut to open it anyhere without opening a terminal.
+5. bind to keyboard shorcut to open it anywhere without opening a terminal.
 
 # you need this dependencies!
 1. dmenu
