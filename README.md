@@ -2,7 +2,7 @@
 upload files using dmenu
 
 # this is how upmenu works
-![upmenu preview](https://0x0.st/oZ9h.mp4)
+![upmenu preview](preview.gif)
 
 # features upmenu have and what you can do!
 1. browse files to their location.
