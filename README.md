@@ -1,6 +1,8 @@
 # upmenu
 upload files using dmenu
 
+also thanks to anurag3301 for adding some improvements for recent upload!
+
 # this is how upmenu works
 ![upmenu preview](preview.gif)
 
@@ -18,6 +20,7 @@ upload files using dmenu
 4. grep
 5. curl
 6. awk
+
 
 
 
