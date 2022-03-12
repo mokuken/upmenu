@@ -1,7 +1,7 @@
 # upmenu
 upload files using dmenu
 
-also thanks to anurag3301 for adding some improvements for recent upload!
+also thanks to anurag3301 for adding more improvements for recent upload!
 
 # this is how upmenu works
 ![upmenu preview](preview.gif)
