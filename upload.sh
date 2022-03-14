@@ -9,10 +9,15 @@ function upmenu {
 		
 		target="$1"
 		[ -z "$target" ] && target="$(realpath .)"
-		
+
+ls() {
+        echo ..
+        command ls -ALNpX1 --group-directories-first "$target"
+}
+
 		while :; do
-		        sel="$(ls -1a "$target" | grep -v '^\.$' | dmenu -l 25 )" || exit
-		        if [ "$(echo "$sel" | cut -b1)" = "/" ]; then
+		        sel="$(ls | dmenu -l 25)" || exit
+		        if [ "$(echo "$sel")" = "/" ]; then
 		                newt="$sel"
 		        else
 		                newt="$(realpath "$target/$sel")"
@@ -28,7 +33,7 @@ function upmenu {
               					echo "URL: $url"
 
               					printf "$url" | xclip -sel clip
-             					notify-send "File Uploaded" "URL: $url \ncopied to clipboard" -t 5000 -i "$HOME/.program/icon.png"
+             					notify-send "File Uploaded" "URL: $url \ncopied to clipboard" -t 5000 -i "$HOME/scripts/icon.png"
 
                					entry="$(date '+%d-%m-%y-%H:%M:%S')    $url    $(echo $target | awk -F'/' '{print $(NF)}')"
              					echo $entry >> $HOME/.0x0_list
@@ -41,7 +46,7 @@ function upmenu {
                     filename=$(echo $var | awk '{print $3}')
                     url=$(echo $var | awk '{print $2}')
                     printf "$url" | xclip -sel clip
-                    notify-send "$filename" "URL: $url \ncopied to clipboard" -t 5000 -i "$HOME/.program/icon.png"
+                    notify-send "$filename" "URL: $url \ncopied to clipboard" -t 5000 -i "$HOME/scripts/icon.png"
 		elif [[ "$selected" == "Cancel" ]]; then
 					return
 				fi
